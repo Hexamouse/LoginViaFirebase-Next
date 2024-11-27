@@ -1,5 +1,3 @@
-// pages/api/users.js
-
 export default function handler(req, res) {
     const users = [
       { username: 'cikunek0045', password: 'Gemscool092!' },
