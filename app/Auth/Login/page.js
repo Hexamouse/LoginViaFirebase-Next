@@ -6,7 +6,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Alert from '../../components/Alert';
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { auth } from '../../../lib/firebase'; // Import Firebase auth
+import { auth } from '../../../lib/firebase';
 import Footer from '../../components/Footer';
 
 export default function Login() {
@@ -16,7 +16,7 @@ export default function Login() {
   const [error, setError] = useState('');
   const [alertMessage, setAlertMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [modalOpen, setModalOpen] = useState(false); // Modal visibility state
+  const [modalOpen, setModalOpen] = useState(false); // Visibilitas State Modal
 
   const handleLogin = async () => {
     setLoading(true);
@@ -34,8 +34,8 @@ export default function Login() {
       const user = userCredential.user;
       localStorage.setItem('user', JSON.stringify(user));
       setLoading(false);
-      setModalOpen(true); // Open the modal on successful login
-      setTimeout(() => router.push('/Dashboard'), 2000); // Redirect to Dashboard after 2 seconds
+      setModalOpen(true); // Open Modal
+      setTimeout(() => router.push('/Dashboard'), 2000); // Ngedirect ke dashboard
     } catch (err) {
       if (err.code === 'auth/invalid-email') {
         setError('Invalid email format');
@@ -65,7 +65,7 @@ export default function Login() {
       localStorage.setItem('user', JSON.stringify(user));
       setLoading(false);
       setModalOpen(true);
-    //   setTimeout(() => router.push('/Dashboard'), 2000);
+    //   setTimeout(() => router.push('/Dashboard'), 2000); // Offkan jika error
     } catch (err) {
       setError('Google login failed. Please try again later.');
       console.error('Google login error:', err.message);
@@ -79,7 +79,6 @@ export default function Login() {
 
   return (
     <div className="relative flex justify-center items-center h-screen bg-[#E3DFF2]">
-      {/* Moving Lines Background */}
       <div className="background-container">
         <div className="line-container">
           {Array.from({ length: 10 }).map((_, index) => (
@@ -94,7 +93,7 @@ export default function Login() {
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* Ensure it stays behind content */
+            z-index: -1;
           }
 
           .line-container {
@@ -112,11 +111,10 @@ export default function Login() {
             position: absolute;
             width: 100%;
             height: 2px;
-            background-color: rgba(0, 0, 0, 0.2); /* Line color */
+            background-color: rgba(0, 0, 0, 0.2);
             animation: moveLine 5s infinite linear;
           }
 
-          /* Animation for moving lines */
           @keyframes moveLine {
             0% {
               transform: translateY(-100%);
@@ -129,7 +127,6 @@ export default function Login() {
             }
           }
 
-          /* Randomizing line speed */
           .line:nth-child(odd) {
             animation-duration: 6s;
           }
@@ -140,7 +137,7 @@ export default function Login() {
         `}</style>
       </div>
 
-      {/* Login Form */}
+      {/* Form */}
       <div className="w-96 p-8 bg-[#f7f7f7] border-2 border-[black] shadow-xl z-10">
         <h2 className="text-center text-4xl font-bold mb-6 text-[#111111]">Login</h2>
 
@@ -182,7 +179,7 @@ export default function Login() {
           {loading ? 'Logging in...' : 'Login'}
         </Button>
 
-        {/* Google login button */}
+        {/* Google Button */}
         <div className="mt-4 text-center">
           <Button
             onClick={handleGoogleLogin}
