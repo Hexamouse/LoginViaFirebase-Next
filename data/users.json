@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "username": "cikunek0045",
+        "password": "Gemscool092!",
+        "nameUsers": "Muhammad Dzikri Maulana",
+        "role": "Developers",
+        "schedule": "dzikriSchedule.json"
+    },
+
+    {
+        "id": 2,
+        "username": "TyoAbdullah123",
+        "password": "12345",
+        "nameUsers": "Tyo Abdullah Ritonga",
+        "role": "Users",
+        "schedule": "tyoSchedule.json"
+    },
+
+    {
+        "id": 3,
+        "username": "RinoFebrian123",
+        "password": "12345",
+        "nameUsers": "Rino Febrian",
+        "role": "Users",
+        "schedule": "rinoSchedule.json"
+    },
+
+    {
+        "id": 3,
+        "username": "ReyhanMaulana123",
+        "password": "12345",
+        "nameUsers": "Reyhan Maulana",
+        "role": "Users",
+        "schedule": "reyhanSchedule.json"
+    }
+]
