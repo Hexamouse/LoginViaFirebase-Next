@@ -7,7 +7,7 @@ import Button from '../../components/Button';
 import Alert from '../../components/Alert';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
 import { auth } from '../../../lib/firebase'; // Import Firebase auth
-import Footer from '../../components/Footer'; // Import Footer component
+import Footer from '../../components/Footer';
 
 export default function Register() {
   const router = useRouter();
@@ -109,7 +109,7 @@ export default function Register() {
             {loading ? 'Registering...' : 'Register'}
           </Button>
 
-          {/* Google login button */}
+          {/* Google Button */}
           <div className="mt-4 text-center">
             <Button
               onClick={handleGoogleLogin}
@@ -130,8 +130,6 @@ export default function Register() {
           </div>
         </div>
       </div>
-
-      {/* Footer will be outside and fixed to the bottom */}
       <Footer />
     </div>
   );
