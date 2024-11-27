@@ -6,7 +6,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import Alert from '../../components/Alert';
 import { createUserWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { auth } from '../../../lib/firebase'; // Import Firebase auth
+import { auth } from '../../../lib/firebase';
 import Footer from '../../components/Footer';
 
 export default function Register() {
